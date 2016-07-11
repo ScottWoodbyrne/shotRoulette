@@ -26,3 +26,32 @@
 .formgroup {
 	display: inline-block;
 }
+.submit{
+	margin-bottom: 20px;
+}
+.result{
+	text-align: center;
+	text-decoration-style: bold;
+	border-style: solid black 5px;
+}
+.resultEven{
+	background-color: green;
+}
+
+.resultOdd{
+	background-color: #d9534f!important;
+	border-color: #d43f3a!important;
+}
+.sectionB{
+	border-width: 5px;
+	border-style: solid;
+	border-color: black;
+	border-radius: 25px;
+	margin: 15px;
+	padding: 15px;
+	text-align: center;
+
+}
+th{
+	text-align: center;
+}
