@@ -55,3 +55,6 @@
 th{
 	text-align: center;
 }
+.highcharts-credits{
+	display: none;
+}
