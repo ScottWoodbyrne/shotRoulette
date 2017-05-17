@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+
 </head>
 <body>
 <div class="jumbotron">
@@ -28,7 +31,6 @@
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
-
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script type="text/javascript">
@@ -115,23 +117,18 @@
 
 		for (var i=0; i<=iMAX; i++) {
 			console.log(i)
-			if ((i+1)%2==0){
-				codeHTML+= ("<tr><td>"+ (i+1) +"</td> <td>"+ selectedPlayers[i]+ "</td></tr>");
-				} else {
-					console.log("howdy")
-					codeHTML+= ("<tr><td>"+ (i+1) +"</td> <td>"+ selectedPlayers[i]+ "</td></tr>");
+			if (i==0){
+				codeHTML+= ("{name: '"+selectedPlayers[i]+"',y: "+ 100/maxRange+"}");
+			}
+			else {
+				codeHTML+= (",{name: '"+selectedPlayers[i]+"',y: "+ 100/maxRange+"}")
 				};
 		};
-			// if ((i+1)%2==0){
-			// 	codeHTML+=("<div class='col-xs-6 result resultEven' style='border-style: solid black 5px'>" + shotNums[i]+": "+ selectedPlayers[i] +"</div>");
-			// }
-			// else {
-			// 	codeHTML+=("<div class='col-xs-6 result resultOdd'>" + shotNums[i]+": "+ selectedPlayers[i] +"</div>");	
-			// }
+			
 
 
 
-		$("body").html("<div class='conatiner sectionB'><table class='table table-striped'><thead><tr><th>Shot Number</th><th>Victim!!!</th></tr></thead> <tbody>" + codeHTML+ "</tbody> </table></div>");
+		$("body").html("<div id='container' style='min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto'></div><script type='text/javascript'>Highcharts.chart('container', {chart: {plotBackgroundColor: null, plotBorderWidth: null, plotShadow: false, type: 'pie'}, title: {text: 'BOOOOOMMMMMM!!!!'},plotOptions: {pie: {cursor: 'pointer',dataLabels: {enabled: true,format: '<b>{point.name}</b>',style: {color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'}}}},series: [{name:'Brands',colorByPoint: true,data: ["+codeHTML+"]}]})");
 		
 	};
 	
@@ -140,6 +137,7 @@
 </script>
 </body>
 </html> 
+
 
 
 
