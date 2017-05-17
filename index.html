@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+
 </head>
 <body>
 <div class="jumbotron">
@@ -17,300 +20,8 @@
 	<h3>Select players from list below</h3><hr />
 	<p>If a player's name is not there select a pokemon for them</p><hr />
 <form name="thisForm">
-<div class="row">
-	<div class="col-xs-6">
-		<div class="form-group">
-		    <input type="checkbox" value="Scott_W" id="Scott" autocomplete="off" />
-			<div class="btn-group">
-				<label for="Scott" class="btn btn-danger">
-					<span class="glyphicon glyphicon-ok"></span>
-		        	<span> </span>
-		        </label>
-		        <label for="Scott" class="btn btn-danger active bigw">
-		                    Scott 1.0
-		        </label>
-		    </div>
-		</div>
-	</div>
-	<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Amy" id="Amy" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Amy" class="btn btn-success">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Amy" class="btn btn-success active bigw">
-		                    Amy
-		                </label>
-		            </div>
-		        </div>
-			</div>
+<div class="row" id="namesSection">
 
-
-
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Aaron" id="Aaron" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Aaron" class="btn btn-success">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Aaron" class="btn btn-success active bigw">
-		                    Aaron
-		                </label>
-		            </div>
-		        </div>
-			</div>
-			
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Gar" id="Gar" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Gar" class="btn btn-danger">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Gar" class="btn btn-danger active bigw">
-		                    Gar
-		                </label>
-		            </div>
-		        </div>
-			</div>
-
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Sarah" id="Sarah" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Sarah" class="btn btn-danger">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Sarah" class="btn btn-danger active bigw">
-		                    Sarah
-		                </label>
-		            </div>
-		        </div>
-		    </div>
-			
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Kathy" id="Kathy" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Kathy" class="btn btn-success">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Kathy" class="btn btn-success active bigw">
-		                    Kathy
-		                </label>
-		            </div>
-		        </div>
-			</div>
-		    
-		    <div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Catherine" id="Catherine" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Catherine" class="btn btn-success">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Catherine" class="btn btn-success active bigw">
-		                    Catherine
-		                </label>
-		            </div>
-		        </div>
-			</div>
-
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Leo" id="Leo" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Leo" class="btn btn-danger">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Leo" class="btn btn-danger active bigw">
-		                    Leo
-		                </label>
-		            </div>
-		        </div>
-		    </div>
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Scott_N" id="Scott_N" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Scott_N" class="btn btn-danger">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Scott_N" class="btn btn-danger active bigw">
-		                    Scott N(.0)
-		                </label>
-		            </div>
-		        </div>
-			</div>
-			
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="JaneyMc" id="JaneyMc" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="JaneyMc" class="btn btn-success">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="JaneyMc" class="btn btn-success active bigw">
-		                    JaneyMc
-		                </label>
-		            </div>
-		        </div>
-			</div>
-
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Paddy" id="Paddy" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Paddy" class="btn btn-success">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Paddy" class="btn btn-success active bigw">
-		                    Paddy
-		                </label>
-		            </div>
-		        </div>
-			</div>
-
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Ali" id="Ali" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Ali" class="btn btn-danger">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Ali" class="btn btn-danger active bigw">
-		                    Ali
-		                </label>
-		            </div>
-		        </div>
-			</div>
-			
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Laoise" id="Laoise" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Laoise" class="btn btn-danger">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Laoise" class="btn btn-danger active bigw">
-		                    Laoise
-		                </label>
-		            </div>
-		        </div>
-			</div>
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Laura" id="Laura" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Laura" class="btn btn-success">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for=":Laura" class="btn btn-success active bigw">
-		                    Laura
-		                </label>
-		            </div>
-		        </div>
-			</div>
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Conor" id="Conor" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Conor" class="btn btn-success">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Conor" class="btn btn-success active bigw">
-		                    Conor
-		                </label>
-		            </div>
-		        </div>
-			</div>
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Endog" id="Endog" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Endog" class="btn btn-danger">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Endog" class="btn btn-danger active bigw">
-		                    Endog
-		                </label>
-		            </div>
-		        </div>
-			</div>
-			
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Alex" id="Alex" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Alex" class="btn btn-danger">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Alex" class="btn btn-danger active bigw">
-		                    Alex
-		                </label>
-		            </div>
-		        </div>
-			</div>
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Pikachu" id="Pikachu" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Pikachu" class="btn btn-success">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Pikachu" class="btn btn-success active bigw">
-		                    Pikachu
-		                </label>
-		            </div>
-		        </div>
-			</div>
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="Squirtle" id="Squirtle" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="Squirtle" class="btn btn-success">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="Squirtle" class="btn btn-success active bigw">
-		                    Squirtle
-		                </label>
-		            </div>
-		        </div>
-			</div>
-			<div class="col-xs-6">
-		        <div class="form-group">
-		            <input type="checkbox" value="red" id="red" autocomplete="off" />
-		            <div class="btn-group">
-		                <label for="red" class="btn btn-danger">
-		                    <span class="glyphicon glyphicon-ok"></span>
-		                    <span> </span>
-		                </label>
-		                <label for="red" class="btn btn-danger active bigw">
-		                    17 red
-		                </label>
-		            </div>
-		        </div>
-			</div>
 
 </div>
 <div class="col-xs-6 col-xs-offset-3">
@@ -320,10 +31,62 @@
 
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
-
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
 <script type="text/javascript">
+
+
+
+	var possiblePlayer = ['Scott1.0', 
+	'Amy',
+	'Gar', 
+	'Aaron',
+	'Sarah',
+	'Kathy',
+	'Catherine',
+	'Leo',
+	'Scott_N0.1',
+	'JaneyMc',
+	'Paddy',
+	'Ali',
+	'Laoise',
+	'Laura',
+	'Conor',
+	'Endog',
+	'Alex',
+	'Pikachu',
+	'Squirtle',
+	'red17'
+	];
+	
+	var mainHTML = "";
+	var counter = 0
+	$( document ).ready(function() {
+    
+		for (i=0; i<=possiblePlayer.length-1; i++){
+			if (counter==0 || counter==3 || counter==4) {
+				mainHTML += ('<div class="col-xs-6"><div class="form-group"><input type="checkbox" value="'+possiblePlayer[i]+'" id="'+possiblePlayer[i]+'" autocomplete="off" /><div class="btn-group"><label for="'+possiblePlayer[i]+'" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span><span> </span></label><label for="'+possiblePlayer[i]+'" class="btn btn-success active bigw">'+possiblePlayer[i]+'</label></div></div></div>');
+				if (counter==4){
+					counter = 1;
+					console.log(counter)
+				} else {
+					counter+=1;
+					console.log(counter)
+					};
+			} else {
+				mainHTML += ('<div class="col-xs-6"><div class="form-group"><input type="checkbox" value="'+possiblePlayer[i]+'" id="'+possiblePlayer[i]+'" autocomplete="off" /><div class="btn-group"><label for="'+possiblePlayer[i]+'" class="btn btn-danger"><span class="glyphicon glyphicon-ok"></span><span> </span></label><label for="'+possiblePlayer[i]+'" class="btn btn-danger active bigw">'+possiblePlayer[i]+'</label></div></div></div>');
+				counter+=1;
+			}
+		} 
+		
+		$("#namesSection").html(mainHTML);
+		
+
+	});
+	
+
+
+
 
 	var selectedPlayers = [];
 	var shotNums = [];
@@ -347,29 +110,25 @@
 
 		
 		selectedPlayers = _.shuffle(selectedPlayers);
-		
+		selectedPlayers = _.shuffle(selectedPlayers);
+		selectedPlayers = _.shuffle(selectedPlayers);
 
 		iMAX = selectedPlayers.length-1;
 
 		for (var i=0; i<=iMAX; i++) {
 			console.log(i)
-			if ((i+1)%2==0){
-				codeHTML+= ("<tr><td>"+ (i+1) +"</td> <td>"+ selectedPlayers[i]+ "</td></tr>");
-				} else {
-					console.log("howdy")
-					codeHTML+= ("<tr><td>"+ (i+1) +"</td> <td>"+ selectedPlayers[i]+ "</td></tr>");
+			if (i==0){
+				codeHTML+= ("{name: '"+selectedPlayers[i]+"',y: "+ 100/maxRange+"}");
+			}
+			else {
+				codeHTML+= (",{name: '"+selectedPlayers[i]+"',y: "+ 100/maxRange+"}")
 				};
 		};
-			// if ((i+1)%2==0){
-			// 	codeHTML+=("<div class='col-xs-6 result resultEven' style='border-style: solid black 5px'>" + shotNums[i]+": "+ selectedPlayers[i] +"</div>");
-			// }
-			// else {
-			// 	codeHTML+=("<div class='col-xs-6 result resultOdd'>" + shotNums[i]+": "+ selectedPlayers[i] +"</div>");	
-			// }
+			
 
 
 
-		$("body").html("<div class='conatiner sectionB'><table class='table table-striped'><thead><tr><th>Shot Number</th><th>Victim!!!</th></tr></thead> <tbody>" + codeHTML+ "</tbody> </table></div>");
+		$("body").html("<div id='container' style='min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto'></div><script type='text/javascript'>Highcharts.chart('container', {chart: {plotBackgroundColor: null, plotBorderWidth: null, plotShadow: false, type: 'pie'}, title: {text: 'BOOOOOMMMMMM!!!!'},plotOptions: {pie: {cursor: 'pointer',dataLabels: {enabled: true,format: '<b>{point.name}</b>',style: {color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'}}}},series: [{name:'Brands',colorByPoint: true,data: ["+codeHTML+"]}]})");
 		
 	};
 	
